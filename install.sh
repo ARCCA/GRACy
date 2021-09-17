@@ -378,7 +378,7 @@ else
 	fi
 
 	echo "Installing bcftools. Please wait...."
-	./src/conda2/bin/conda install -c bioconda -y  bcftools >> installation.log
+	./src/conda2/bin/conda install -c bioconda -y  bcftools openssl=1.0 >> installation.log
 	echo "Checking bcftools installation...."
 	./src/conda2/bin/conda list > condaList
 	if grep -Fq bcftools condaList; then
